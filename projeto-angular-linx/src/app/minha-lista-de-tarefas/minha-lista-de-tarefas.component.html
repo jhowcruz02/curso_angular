@@ -1,0 +1,9 @@
+<ul>
+    <li *ngFor="let tarefa of listadetarefas; let i = index">
+        {{ tarefa }}
+        <button (click)="removeritem(i)"> Remover </button>
+    </li>
+</ul>
+<br>
+<button (click)="adicionaritem()"> Adicionar </button>
+
