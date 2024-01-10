@@ -1,0 +1,27 @@
+<div> 
+    <h2>Categoria de Produtos</h2>
+
+  <div [ngSwitch]="categoriaselecionada">
+   <div *ngSwitchCase="'Eletronicos'">
+       <h3>Eletronicos</h3>
+       <p>Oferecemos Produtos Eletronicos</p>
+   </div> 
+   <div *ngSwitchCase="'Vestuario'">
+        <h3>Vestuario</h3>
+        <p>Oferecemos Vestuario</p>
+    </div> 
+    <div *ngSwitchCase="'Alimentos'">
+        <h3>Alimentos</h3>
+        <p>Oferecemos Alimentos</p>
+    </div>
+    <div *ngSwitchDefault>
+        <h3>Categoria Não Encontrada</h3>
+        <p>A Categoria selecionada não existe.</p>
+    </div>
+    <br>
+    <button (click)="alterarcategoria('Eletronicos')">Eletronicos</button>
+    <button (click)="alterarcategoria('Vestuario')">Vestuario</button>
+    <button (click)="alterarcategoria('Alimentos')">Alimentos</button>
+    <button (click)="alterarcategoria('Outros')">Outros</button>
+</div>
+ 

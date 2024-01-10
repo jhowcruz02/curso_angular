@@ -4,11 +4,12 @@ import { RouterOutlet } from '@angular/router';
 import { TitleComponent } from './title/title.component';
 import { FormsModule } from '@angular/forms';
 import { MinhaListaDeTarefasComponent } from './minha-lista-de-tarefas/minha-lista-de-tarefas.component'
+import { ProdutoInfoComponent } from './produto-info/produto-info.component'
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, TitleComponent, FormsModule, MinhaListaDeTarefasComponent], 
+  imports: [CommonModule, RouterOutlet, TitleComponent, FormsModule, MinhaListaDeTarefasComponent,ProdutoInfoComponent], 
   template: `
   {{valor}}
   <app-title *ngIf="ExibirComponente" [title]="novotitulo"></app-title>
@@ -23,6 +24,8 @@ import { MinhaListaDeTarefasComponent } from './minha-lista-de-tarefas/minha-lis
   <button (click)="AlternarExibirbotoes()">Alternar botoes</button>
   <br><hr><br>
   <app-minha-lista-de-tarefas></app-minha-lista-de-tarefas>
+  <br><hr><br>
+  <app-produto-info></app-produto-info>
   <router-outlet></router-outlet>`
 })
 
