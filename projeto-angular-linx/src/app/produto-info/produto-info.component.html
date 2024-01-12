@@ -1,5 +1,8 @@
 <div> 
-    <h2>Categoria de Produtos</h2>
+    <h2 [ngClass]="{
+            'destacado': destaque,
+            'tamanhogrande': tamanhogrande
+    }">Categoria de Produtos</h2>
 
   <div [ngSwitch]="categoriaselecionada">
    <div *ngSwitchCase="'Eletronicos'">
@@ -23,5 +26,8 @@
     <button (click)="alterarcategoria('Vestuario')">Vestuario</button>
     <button (click)="alterarcategoria('Alimentos')">Alimentos</button>
     <button (click)="alterarcategoria('Outros')">Outros</button>
+    <br><hr>
+    <button (click)="AlterarDestaque()">Alternar Destaque</button>
+    <button (click)="AlterarTamanho()">Alternar Tamanho</button>
 </div>
  

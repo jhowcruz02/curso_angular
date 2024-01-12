@@ -15,6 +15,16 @@ export class ProdutoInfoComponent {
      public alterarcategoria(novacategoria: string){
        this.categoriaselecionada = novacategoria;
      }
+     
+     public destaque: boolean = false;
+     public tamanhogrande: boolean = false;
 
-   
+     public AlterarDestaque(){
+     this.destaque = !this.destaque;
+     }
+
+     public AlterarTamanho(){
+      this.tamanhogrande = !this.tamanhogrande;
+      }
+
 }
