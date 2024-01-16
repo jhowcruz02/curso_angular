@@ -3,6 +3,9 @@
             'destacado': destaque,
             'tamanhogrande': tamanhogrande
     }">Categoria de Produtos</h2>
+  
+  <div [ngStyle]="Estilo"
+   >Aqui Listamos nossos Produtos</div>  
 
   <div [ngSwitch]="categoriaselecionada">
    <div *ngSwitchCase="'Eletronicos'">
@@ -29,5 +32,6 @@
     <br><hr>
     <button (click)="AlterarDestaque()">Alternar Destaque</button>
     <button (click)="AlterarTamanho()">Alternar Tamanho</button>
+    <button (click)="AlternarEstilo()">Alternar Estilo</button>
 </div>
  

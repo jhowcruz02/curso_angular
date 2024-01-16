@@ -26,5 +26,28 @@ export class ProdutoInfoComponent {
      public AlterarTamanho(){
       this.tamanhogrande = !this.tamanhogrande;
       }
+     
+     public EstiloPadrao: any = {
+        'font-size': '16px',
+        'color': 'black',
+        'background-color': 'gray'
+      }; 
+
+     
+      public EstiloRealce: any={
+        'font-size': '25px',
+        'color': 'red',
+        'background-color': 'lightgray'
+      }
+      
+      Estilo:any = this.EstiloPadrao;
+      RealceAtivo: boolean = false; 
+
+     public AlternarEstilo(){
+        this.RealceAtivo = !this.RealceAtivo;
+        this.Estilo = this.RealceAtivo ? this.EstiloRealce : this.EstiloPadrao;
+     } 
+
+
 
 }
